@@ -632,26 +632,6 @@
     ctx.restore();
   }
 
-  function confettiBurst(x,y){
-  const colors=["#b9f3e3","#fff3b0","#ffc8e8","#d9c8ff","#ffd6b5","#dff6ff"];
-  // cap to prevent giant overdraw on some devices
-  if (confetti.length > 200) confetti.length = 200;
-
-  for(let i=0;i<50;i++){
-    confetti.push({
-      x,y,
-      vx:rng(-4,4),
-      vy:rng(-7,-2),
-      g:rng(0.16,0.22),
-      r:rng(2,4),
-      rot:rng(0,6.28),
-      vr:rng(-0.12,0.12),
-      a:1,
-      color:colors[Math.floor(rng(0,colors.length))]
-    });
-  }
-}
-
 // safer sparkles (no full-screen blob)
 function sparkleStorm(){
   // cap sparkles
